@@ -1,0 +1,35 @@
+@import "../../utilities/variables.scss";
+
+.footer {
+    display: flex;
+    @include center;
+    flex-direction: column;
+    background: $black-color;
+    padding: 66px 0 29px 0;
+    gap: 29px;
+
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        padding: 66px 0 45px 0;
+        gap: 15px;
+    }
+
+    @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+        padding: 66px 0 58px 0;
+        gap: 10px;
+    }
+
+    &__copyright {
+        @include font;
+        text-align: center;
+        line-height: 142.6%;
+
+        @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+            @include font(500, 1.3rem);
+        }
+    
+        @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+            @include font(500, 0.8rem);
+            width: 30%;
+        }
+    }
+}
