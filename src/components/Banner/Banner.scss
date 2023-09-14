@@ -3,12 +3,12 @@
     height: 223px;
     margin-bottom: 43px;
 
-    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    @include tablet {
         height: 180px;
         margin-bottom: 33px;
     }
 
-    @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+    @include mobile {
         height: 111px;
         margin-bottom: 22px;
     }
@@ -20,11 +20,11 @@
         object-fit: cover;
         filter: brightness(70%);
 
-        @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        @include tablet {
             border-radius: 20px;
         }
-    
-        @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+        
+        @include mobile {
             border-radius: 10px;
         }
     }
@@ -39,18 +39,18 @@
         line-height: 142.6%;
         transform: translate(-50%, -50%);
         min-width: 60%;
+        user-select: none;
 
-        @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        @include tablet {
             @include font(500, 2rem);
-            min-width: 60%;
         }
     
-        @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+        @include mobile {
             @include font(500, 1.5rem);
             line-height: 100%;
             text-align: left;
             min-width: 65%;
-            transform: translate(-73%, -50%);
+            transform: translate(-70%, -50%);
         }
     }
 }

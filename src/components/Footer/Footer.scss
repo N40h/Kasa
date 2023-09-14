@@ -7,13 +7,15 @@
     background: $black-color;
     padding: 66px 0 29px 0;
     gap: 29px;
+    position: sticky;
+    top: 100%;
 
-    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    @include tablet {
         padding: 66px 0 45px 0;
         gap: 15px;
     }
 
-    @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+    @include mobile {
         padding: 66px 0 58px 0;
         gap: 10px;
     }
@@ -22,12 +24,13 @@
         @include font;
         text-align: center;
         line-height: 142.6%;
+        user-select: none;
 
-        @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        @include tablet {
             @include font(500, 1.3rem);
         }
-    
-        @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+
+        @include mobile {
             @include font(500, 0.8rem);
             width: 30%;
         }

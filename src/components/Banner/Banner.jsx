@@ -1,11 +1,16 @@
 import React from "react"
-import BannerBackground from "../../assets/banner.png"
+import { useLocation } from "react-router-dom"
 
-export default function Banner() {
+
+export default function Banner({ image, alt, title }) {
+    document.title = "Kasa - A Propos";
+    
+    const location = useLocation();
+
     return (
         <section className="banner">
-            <img src={BannerBackground} alt="paysage falaise" />
-            <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
+            <img src={image} alt={alt} />
+            {location.pathname === "/" && <h1 className="banner__title">{title}</h1>}
         </section>
     )
 }

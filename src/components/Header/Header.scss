@@ -4,18 +4,18 @@
     align-items: center;
     margin-top: 45px;
 
-    @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+    @include mobile {
         justify-content: center;
         margin-top: 20px;
         gap: 26px;
     }
 
     &__logo {
-        @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        @include tablet {
             width: 180px;
         }
-    
-        @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+
+        @include mobile {
             width: 145px;
         }
     }

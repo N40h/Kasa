@@ -1,7 +1,25 @@
 import React from "react"
+import aboutData from "../../data/aboutData.json"
+import Banner from "../../components/Banner/Banner"
+import Collapse from "../../components/Collapse/Collapse"
+import BannerBackground from "../../assets/other-banner.png"
 
 export default function About() {
     return (
-        <h1>TEST</h1>
+        <React.Fragment>
+            <Banner
+                image={BannerBackground}
+                alt="paysage de montagne"
+            />
+            <section className="collapse">
+                {aboutData.map((data) => {
+                    return <Collapse
+                        key={data.id}
+                        title={data.title}
+                        content={data.content}
+                    />
+                })}
+            </section>
+        </React.Fragment>
     )
 }

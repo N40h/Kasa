@@ -10,15 +10,17 @@ import Footer from "../components/Footer/Footer";
 export default function Router() {
     return (
         <BrowserRouter>
-            <Header />
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/a-propos" element={<About />} />
-                    <Route path="/fiche-logement/:id" element={<Accommodation />} />
-                    <Route path="*" element={<Error/>} />
-                </Routes>
-            </main>
+            <div className="wrapper">
+                <Header />
+                <main>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/a-propos" element={<About />} />
+                        <Route path="/fiche-logement/:id" element={<Accommodation />} />
+                        <Route path="*" element={<Error/>} />
+                    </Routes>
+                </main>
+            </div>
             <Footer />
         </BrowserRouter>
     )

@@ -9,3 +9,15 @@
     font-weight: $weight;
     font-size: $size;
 }
+
+@mixin tablet {
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}

@@ -6,11 +6,11 @@
     overflow: hidden;
     position: relative;
 
-    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    @include tablet {
         height: 300px;
     }
 
-    @media (min-width: 320px) and (max-width: $breakpoint-mobile) {
+    @include mobile {
         height: 255px;
     }
 
