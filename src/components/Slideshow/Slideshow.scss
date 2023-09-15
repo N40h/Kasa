@@ -1,0 +1,88 @@
+.slideshow {
+    height: 415px;
+    margin-bottom: 32px;
+    position: relative;
+
+    @include tablet {
+        height: 335px;
+        margin-bottom: 25px;
+    }
+
+    @include mobile {
+        height: 255px;
+        margin-bottom: 15px;
+    }
+
+    &__images {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+
+        @include tablet {
+            border-radius: 15px;
+        }
+
+        @include mobile {
+            border-radius: 10px;
+        }
+    }
+
+    &__arrow--left {
+        position: absolute;
+        top: 40%;
+        left: 23px;
+        cursor: pointer;
+
+        @include tablet {
+            height: 40px;
+            left: 10px;
+        }
+
+        @include mobile {
+            height: 24px;
+            left: 5px;
+        }
+    }
+
+    &__arrow--right {
+        position: absolute;
+        top: 40%;
+        right: 23px;
+        cursor: pointer;
+
+        @include tablet {
+            height: 40px;
+            right: 10px;
+        }
+
+        @include mobile {
+            height: 24px;
+            right: 5px;
+        }
+    }
+
+    &__arrow--none {
+        display: none;
+    }
+
+    &__count {
+        position: absolute;
+        bottom: 25px;
+        right: 50%;
+        @include font(500, 1.125rem);
+        line-height: 142.6%;
+
+        @include tablet {
+            bottom: 10px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__count--none {
+        display: none;
+    }
+}

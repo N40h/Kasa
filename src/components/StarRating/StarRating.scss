@@ -1,0 +1,12 @@
+.accommodation__ratings {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+        @include mobile {
+            height: 18px;
+        }
+    }
+
+}
