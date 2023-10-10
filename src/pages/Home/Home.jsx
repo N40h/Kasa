@@ -4,7 +4,7 @@ import Gallery from "../../components/Gallery/Gallery"
 import BannerBackground from "../../assets/banner.png"
 
 export default function Home() {
-	document.title = "Kasa - Accueil"
+	document.title = 'Kasa - Accueil';
 	
 	return (
 		<React.Fragment>

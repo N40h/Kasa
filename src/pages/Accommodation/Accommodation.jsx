@@ -6,6 +6,8 @@ import StarRating from "../../components/StarRating/StarRating"
 import Collapse from "../../components/Collapse/Collapse"
 
 export default function Accommodation() {
+    document.title = 'Kasa - Logement'
+    
     const [currentAccommodationData, setCurrentAccommodationData] = useState([])
 
     const { id } = useParams();

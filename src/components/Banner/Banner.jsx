@@ -2,9 +2,7 @@ import React from "react"
 import { useLocation } from "react-router-dom"
 
 
-export default function Banner({ image, alt, title }) {
-    document.title = "Kasa - A Propos";
-    
+export default function Banner({ image, alt, title }) {    
     const location = useLocation();
 
     return (

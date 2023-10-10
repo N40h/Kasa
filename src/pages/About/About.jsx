@@ -5,6 +5,8 @@ import Collapse from "../../components/Collapse/Collapse"
 import BannerBackground from "../../assets/other-banner.png"
 
 export default function About() {
+    document.title = 'Kasa - A propos'
+    
     return (
         <React.Fragment>
             <Banner
